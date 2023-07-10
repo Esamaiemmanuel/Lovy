@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lovy.Views.LoginPage"
+             Title="Login"
+             BackgroundColor="#fe4f49">
+
+    <VerticalStackLayout Spacing="10" Margin="20,0,20,20">
+        
+        <Label 
+            
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button x:Name="btnGoogle" Text="Google Login" Clicked="OnGoogleLoginClicked"></Button>
+        <Button x:Name="btnPhoneNumber" Text="Phone Number Login" Clicked="OnPhoneNumberLoginClicked"></Button>
+     
+    </VerticalStackLayout>
+</ContentPage>

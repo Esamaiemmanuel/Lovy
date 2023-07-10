@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lovy.MainPage"
+               BackgroundColor="#fe4f49">
+
+    <Grid VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+
+
+        <Label Grid.Row="2"
+               Text='By Clicking "Log in", you agree with our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy'
+               HorizontalOptions="Center"
+               VerticalOptions="FillAndExpand"
+               Margin="20,20,20,0"
+               TextColor="White"/>
+       
+
+
+        <StackLayout HorizontalOptions="FillAndExpand"
+                   VerticalOptions="Center" Grid.Row="2">
+
+            
+            <Grid Margin="20,20,20,0">
+                <Grid.RowDefinitions>  <RowDefinition Height="Auto" />     </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.Column="0"  Source="asset_1.png" Margin="0,0,-50,0" HeightRequest="20"   WidthRequest="20"    VerticalOptions="Center"  Grid.ZIndex="1" Aspect="AspectFit" />
+                    <Button Grid.Row="0" Grid.Column="1" Padding="10" CornerRadius="20"  BackgroundColor="White" TextColor="Black" Text="LOG IN WITH GOOGLE" />
+
+            </Grid>
+            
+            
+
+            <Grid Margin="20,20,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.Column="0" Source="facebook.png" Margin="0,0,-50,0" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" Grid.ZIndex="1"/>
+
+                <Button Grid.Row="0" Grid.Column="1" Padding="10" CornerRadius="20" BackgroundColor="White" TextColor="Black" Text="LOG IN WITH FACEBOOK" />
+                
+            </Grid>
+
+
+            <Grid Margin="20,20,20,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.Column="0" Source="asset_1.png" Margin="0,0,-50,0" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" Grid.ZIndex="1"/>
+
+                <Button Grid.Row="0" Grid.Column="1" Padding="10" CornerRadius="20" BackgroundColor="White" TextColor="Black" Text="LOG IN WITH PHONE NUMBER" />
+
+            </Grid>
+           
+
+
+        </StackLayout>
+
+
+        <Label Grid.Row="3"
+               Text="Trouble logging in?"
+               HorizontalOptions="Center"
+               VerticalOptions="End"
+               Margin="0,10,0,10"
+               TextColor="White"/>
+    </Grid>
+    
+</ContentPage>
