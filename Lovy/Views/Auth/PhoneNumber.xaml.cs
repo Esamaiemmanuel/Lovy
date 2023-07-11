@@ -1,31 +1,20 @@
-using Microsoft.Maui.Controls;
-using System;
+namespace Lovy.Views.Auth;
 
-namespace Lovy.Views.Auth
-
+public partial class PhoneNumber : ContentPage
 {
-    public partial class PhoneNumberPage : ContentPage
+	public PhoneNumber()
+	{
+		InitializeComponent();
+	}
+    private void CountryCodeSelectedIndexChanged(object sender, EventArgs e)
     {
-        public PhoneNumberPage()
-        {
-            InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnVerifyClicked(object sender, EventArgs e)
-        {
-            //string phoneNumber = PhoneNumberEntry.Text;
-
-            // Validate phone number and trigger the code verification process
-          /*  if (!string.IsNullOrWhiteSpace(phoneNumber))
-            {
-                // Perform actions to verify the phone number
-                // You can navigate to the code verification page or trigger an OTP SMS
-            } */
-        }
+     
     }
+
+    private void NextButton_Clicked(object sender, EventArgs e)
+    {
+        
+    }
+
+    
 }

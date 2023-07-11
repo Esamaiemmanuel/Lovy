@@ -51,7 +51,7 @@
 
             <Image Grid.Row="0" Grid.Column="0" Source="facebook.png" Margin="0,0,-50,0" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" Grid.ZIndex="1"/>
 
-            <Button x:Name="btnFacebook" Clicked="btnFacebook_Clicked"
+            <Button x:Name="btnFacebook" Clicked="BtnFacebook_Clicked"
                     Grid.Column="1" Padding="10" CornerRadius="20" BackgroundColor="White" TextColor="Black" Text="LOG IN WITH FACEBOOK"></Button>
 
         </Grid>

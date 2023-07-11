@@ -7,12 +7,12 @@ public partial class AddEmailPage : ContentPage
 		InitializeComponent();
 	}
 
-    private void btnCancel_Clicked(object sender, EventArgs e)
+    private void BtnCancel_Clicked(object sender, EventArgs e)
     {
          Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
     }
 
-    private void btnSubmit_Clicked(object sender, EventArgs e)
+    private void BtnSubmit_Clicked(object sender, EventArgs e)
     {
         string email = mailEntry.Text;
 
@@ -20,4 +20,13 @@ public partial class AddEmailPage : ContentPage
         // For example, display a message or perform an action
         DisplayAlert("Submitted", $"Email: {email}", "OK");
     }
+
+    private void OnGoogleLoginClicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+    }
+
+  
+
+  
 }

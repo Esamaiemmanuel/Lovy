@@ -3,15 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lovy.Views.Auth.PhoneNumber"
              Title="Phone Number">
-    <VerticalStackLayout>
-        <Label 
-            Text="Phone Number"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-            <Entry x:Name="PhoneNumberEntry" Placeholder="Enter Phone Number" />
-            <Button x:Name="btnNumber"></Button>
+    
+   <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Label Text="Phone Number" HorizontalOptions="Center" />
+            <StackLayout Orientation="Horizontal">
+                <Picker x:Name="CountryCodePicker" Title="Select Country Code" SelectedIndexChanged="CountryCodeSelectedIndexChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>+1</x:String>
+                            <x:String>+91</x:String>
+                            <x:String>+254</x:String>
+                            <x:String>+256</x:String>
+                            <x:String>+251</x:String>
+                            <x:String>+255</x:String>
+                            <x:String>+257</x:String>
+                            <x:String>+258</x:String>
+                            <!-- Add more country codes here -->
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Entry x:Name="PhoneNumberEntry" Placeholder="Enter Phone Number" />
+            </StackLayout>
+            <Button Text="Next" Clicked="NextButton_Clicked"/>
         </StackLayout>
-    </VerticalStackLayout>
+    
 </ContentPage>
-

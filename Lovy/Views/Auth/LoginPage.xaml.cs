@@ -24,7 +24,7 @@ namespace Lovy.Views.Auth
             Shell.Current.GoToAsync(nameof(PhoneNumber));
         }
 
-        private void btnFacebook_Clicked(object sender, EventArgs e)
+        private void BtnFacebook_Clicked(object sender, EventArgs e)
         {
             Shell.Current.GoToAsync(nameof(CodeVerification));
 
