@@ -1,4 +1,4 @@
-﻿using Lovy.Views;
+﻿using Lovy.Views.Auth;
 
 namespace Lovy;
 
@@ -10,5 +10,6 @@ public partial class AppShell : Shell
 		Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
 		Routing.RegisterRoute(nameof(CodeVerification), typeof(CodeVerification));
 		Routing.RegisterRoute(nameof(PhoneNumber), typeof(PhoneNumber));
+		Routing.RegisterRoute(nameof(AddEmailPage), typeof(AddEmailPage));
 	}
 }

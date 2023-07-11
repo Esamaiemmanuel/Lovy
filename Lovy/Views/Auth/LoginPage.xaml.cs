@@ -1,7 +1,7 @@
 using Microsoft.Maui.Controls;
 using System;
 
-namespace Lovy.Views
+namespace Lovy.Views.Auth
 {
     public partial class LoginPage : ContentPage
     {
@@ -14,14 +14,20 @@ namespace Lovy.Views
         {
             // Handle Google login button click event
             // Perform actions for Google login
-            Shell.Current.GoToAsync(nameof(CodeVerification));
+            Shell.Current.GoToAsync(nameof(AddEmailPage));
         }
 
         private void OnPhoneNumberLoginClicked(object sender, EventArgs e)
         {
             // Handle phone number login button click event
             // Perform actions for phone number login
+            Shell.Current.GoToAsync(nameof(PhoneNumber));
+        }
+
+        private void btnFacebook_Clicked(object sender, EventArgs e)
+        {
             Shell.Current.GoToAsync(nameof(CodeVerification));
+
         }
     }
 }

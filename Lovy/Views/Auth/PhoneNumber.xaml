@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Lovy.Views.PhoneNumber"
-             Title="PhoneNumber">
+             x:Class="Lovy.Views.Auth.PhoneNumber"
+             Title="Phone Number">
     <VerticalStackLayout>
         <Label 
             Text="Phone Number"
@@ -10,7 +10,7 @@
             HorizontalOptions="Center" />
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
             <Entry x:Name="PhoneNumberEntry" Placeholder="Enter Phone Number" />
-            <Button Text="Verify"  />
+            <Button x:Name="btnNumber"></Button>
         </StackLayout>
     </VerticalStackLayout>
 </ContentPage>

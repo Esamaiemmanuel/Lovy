@@ -1,7 +1,7 @@
 using Microsoft.Maui.Controls;
 using System;
 
-namespace Lovy.Pages
+namespace Lovy.Views.Auth
 
 {
     public partial class PhoneNumberPage : ContentPage

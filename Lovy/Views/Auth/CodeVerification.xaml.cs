@@ -1,4 +1,4 @@
-namespace Lovy.Views;
+namespace Lovy.Views.Auth;
 
 public partial class CodeVerification : ContentPage
 {

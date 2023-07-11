@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lovy.Views.Auth.LoginPage"
+             Title="Login"
+             BackgroundColor="#fe4f49">
+
+    <VerticalStackLayout Spacing="10" Margin="20,0,20,20">
+        <Grid Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+
+        </Grid>
+
+        <Label
+               Text='By Clicking "Log in", you agree with our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy'
+               HorizontalOptions="Center"
+               VerticalOptions="FillAndExpand"
+               Margin="20,20,20,0"
+               TextColor="White"/>
+
+
+        <Grid Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Row="0" Grid.Column="0"  Source="asset_1.png" Margin="0,0,-50,0" HeightRequest="20"   WidthRequest="20"    VerticalOptions="Center"  Grid.ZIndex="1" Aspect="AspectFit" />
+            <Button x:Name="btnGoogle" Clicked="OnGoogleLoginClicked" Grid.Column="1" Padding="10" CornerRadius="20"  BackgroundColor="White" TextColor="Black" Text="LOG IN WITH GOOGLE"></Button>
+
+        </Grid>
+
+
+
+        <Grid Margin="20,20,20,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Row="0" Grid.Column="0" Source="facebook.png" Margin="0,0,-50,0" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" Grid.ZIndex="1"/>
+
+            <Button x:Name="btnFacebook" Clicked="btnFacebook_Clicked"
+                    Grid.Column="1" Padding="10" CornerRadius="20" BackgroundColor="White" TextColor="Black" Text="LOG IN WITH FACEBOOK"></Button>
+
+        </Grid>
+
+
+        <Grid Margin="20,20,20,0">
+
+            <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Row="0" Grid.Column="0" Source="asset_1.png" Margin="0,0,-50,0" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" Grid.ZIndex="1"/>
+
+            <Button x:Name="btnPhoneNumber" Clicked="OnPhoneNumberLoginClicked" Grid.Row="0" Grid.Column="1" Padding="10" CornerRadius="20" BackgroundColor="White" TextColor="Black" Text="LOG IN WITH PHONE NUMBER"></Button>
+
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>

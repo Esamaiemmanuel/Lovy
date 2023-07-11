@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lovy.Views.Auth.AddEmailPage"
+             Title="Add Email"
+             BackgroundColor="White">
+   
+
+    <VerticalStackLayout Spacing="10" Margin="20,0,20,20" Padding="20">
+        <Label 
+            Text="What's your email?"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label 
+            Text="Dont lose access to your account, Verify your email"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry x:Name="emailEntry"
+               Placeholder="Email address"
+               Keyboard="Email" />
+
+       
+       
+        <Button x:Name="btnCancel" Text="Cancel" Clicked="btnCancel_Clicked"></Button>
+
+    </VerticalStackLayout>
+</ContentPage>
