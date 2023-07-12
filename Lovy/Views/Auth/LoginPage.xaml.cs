@@ -26,7 +26,8 @@ namespace Lovy.Views.Auth
 
         private void BtnFacebook_Clicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync(nameof(CodeVerification));
+            //Shell.Current.GoToAsync(nameof(CodeVerification));
+            Shell.Current.GoToAsync(nameof(RulePage));
 
         }
     }

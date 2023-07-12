@@ -13,7 +13,7 @@ public partial class PhoneNumber : ContentPage
 
     private void NextButton_Clicked(object sender, EventArgs e)
     {
-        
+        Shell.Current.GoToAsync(nameof(RulePage));
     }
 
     

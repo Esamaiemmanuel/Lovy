@@ -6,4 +6,9 @@ public partial class NamePage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void NextStep_Clicked(object sender, EventArgs e)
+    {
+		Shell.Current.GoToAsync(nameof(DateOfBirthPage));
+    }
 }

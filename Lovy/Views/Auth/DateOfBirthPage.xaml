@@ -8,5 +8,6 @@
             Text="Welcome to .NET MAUI!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button x:Name="NextBtn" Text="Next Step" Clicked="NextBtn_Clicked"></Button>
     </VerticalStackLayout>
 </ContentPage>

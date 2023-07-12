@@ -19,6 +19,7 @@ public partial class AddEmailPage : ContentPage
         // Validate and process the email address
         // For example, display a message or perform an action
         DisplayAlert("Submitted", $"Email: {email}", "OK");
+        Shell.Current.GoToAsync(nameof(RulePage));
     }
 
     private void OnGoogleLoginClicked(object sender, EventArgs e)

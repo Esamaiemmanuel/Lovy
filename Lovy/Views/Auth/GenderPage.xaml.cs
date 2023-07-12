@@ -6,4 +6,9 @@ public partial class GenderPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void NextBtn_Clicked(object sender, EventArgs e)
+    {
+		Shell.Current.GoToAsync(nameof(QualitiesPage));
+    }
 }
