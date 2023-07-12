@@ -2,12 +2,90 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lovy.Views.Auth.NamePage"
-             Title="First Name">
-    <VerticalStackLayout>
+             Title="Name">
+   
+    
+    <VerticalStackLayout Spacing="10" Margin="20,0,20,20" Padding="20">
         <Label 
-            Text="Enter your first name"
+            Text="First Name"
+            FontAttributes="Bold"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Button x:Name="NextStep" Text="Next Step" Clicked="NextStep_Clicked"></Button>
+            HorizontalOptions="Start" />
+
+       
+        <Border Stroke="black"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 40"
+                Padding="10,0,10,0">
+
+            <Entry Placeholder="Enter your first name"
+               Keyboard="Text"
+               x:Name="FirstName"
+               TextColor="Black"
+               BackgroundColor="Transparent"
+              
+               PlaceholderColor="Gray"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="CenterAndExpand">
+                <Entry.FontSize>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="16" />
+                        <On Platform="Android" Value="18" />
+                    </OnPlatform>
+                </Entry.FontSize>
+            </Entry>
+        </Border>
+
+
+            <Label 
+            Text="Last Name"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+
+
+            <Border Stroke="black"
+                StrokeThickness="1"
+                StrokeShape="RoundRectangle 40"
+                Padding="10,0,10,0">
+
+                <Entry Placeholder="Enter your last name"
+               Keyboard="Text"
+               x:Name="LastName"
+               TextColor="Black"
+               BackgroundColor="Transparent"
+              
+               PlaceholderColor="Gray"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="CenterAndExpand">
+                    <Entry.FontSize>
+                        <OnPlatform x:TypeArguments="x:Double">
+                            <On Platform="iOS" Value="16" />
+                            <On Platform="Android" Value="18" />
+                        </OnPlatform>
+                    </Entry.FontSize>
+                </Entry>
+            </Border>
+
+
+            <Grid Margin="0,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+  
+              <Button x:Name="NextStep" Text="Next Step" Clicked="NextStep_Clicked" Grid.Column="1" Padding="15" CornerRadius="40"  BackgroundColor="Red" TextColor="White"></Button>
+
+            </Grid>
+
+        
+        
+
+
     </VerticalStackLayout>
 </ContentPage>

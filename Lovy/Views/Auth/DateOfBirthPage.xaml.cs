@@ -11,4 +11,9 @@ public partial class DateOfBirthPage : ContentPage
     {
 		Shell.Current.GoToAsync(nameof(GenderPage));
     }
+
+    private void BtnBack_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync(nameof(NamePage));
+    }
 }
