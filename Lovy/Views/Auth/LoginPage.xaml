@@ -35,7 +35,7 @@
             </Grid.ColumnDefinitions>
 
             <Image Grid.Row="0" Grid.Column="0"  Source="asset_1.png" Margin="0,0,-50,0" HeightRequest="20"   WidthRequest="20"    VerticalOptions="Center"  Grid.ZIndex="1" Aspect="AspectFit" />
-            <Button x:Name="btnGoogle" Clicked="OnGoogleLoginClicked" Grid.Column="1" Padding="10" CornerRadius="20"  FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="12" BackgroundColor="White" TextColor="Black" Text="LOG IN WITH GOOGLE"></Button>
+            <Button x:Name="btnGoogle" Clicked="OnGoogleLoginClicked" Grid.Column="1" Padding="10" CornerRadius="30"  FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="15" BackgroundColor="White" TextColor="Black" Text="LOG IN WITH GOOGLE"></Button>
 
         </Grid>
 
@@ -54,7 +54,7 @@
             <Image Grid.Row="0" Grid.Column="0" Source="facebook.png" Margin="0,0,-50,0" HeightRequest="20" WidthRequest="20" VerticalOptions="Center"  Grid.ZIndex="1"/>
 
             <Button x:Name="btnFacebook" Clicked="BtnFacebook_Clicked"
-                    Grid.Column="1" Padding="10" CornerRadius="20" BackgroundColor="White" TextColor="Black" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="12" Text="LOG IN WITH FACEBOOK"></Button>
+                    Grid.Column="1" Padding="10" CornerRadius="30" BackgroundColor="White" TextColor="Black" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="15" Text="LOG IN WITH FACEBOOK"></Button>
 
         </Grid>
 
@@ -72,7 +72,7 @@
 
         <Image Grid.Row="0" Grid.Column="0" Source="asset_1.png" Margin="0,0,-50,0" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" Grid.ZIndex="1"/>
 
-            <Button x:Name="btnPhoneNumber" Clicked="OnPhoneNumberLoginClicked" Grid.Row="0" Grid.Column="1" Padding="10" CornerRadius="20" BackgroundColor="White" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="12" TextColor="Black" Text="LOG IN WITH PHONE NUMBER"></Button>
+            <Button x:Name="btnPhoneNumber" Clicked="OnPhoneNumberLoginClicked" Grid.Row="0" Grid.Column="1" Padding="10" CornerRadius="30" BackgroundColor="White" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="15" TextColor="Black" Text="LOG IN WITH PHONE NUMBER"></Button>
 
         </Grid>
 
