@@ -30,5 +30,9 @@ namespace Lovy.Views.Auth
             Shell.Current.GoToAsync(nameof(RulePage));
 
         }
+        private void ForgetLabel_Tapped(object sender, EventArgs e)
+        {
+            //Navigation.PushAsync(new RegisterPage());
+        }
     }
 }

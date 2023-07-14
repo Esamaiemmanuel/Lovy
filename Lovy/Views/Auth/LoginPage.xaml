@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lovy.Views.Auth.LoginPage"
+             Shell.BackgroundColor="#fe4f49"
              BackgroundColor="#fe4f49">
 
-    <VerticalStackLayout Spacing="10" Margin="20,0,20,20">
-        <Image  Source="facebook.png" Margin="10,80,10,10"/>
+    <VerticalStackLayout Spacing="10" Margin="0,0,0,0">
+        <Image  Source="facebook.png" Margin="10,60,10,10"/>
         <Grid Padding="10">
             <Grid.RowDefinitions>
                 <RowDefinition Height="80" />
@@ -17,10 +18,10 @@
         <Label
                Text='By Clicking "Log in", you agree with our Terms. Learn how we process your data in our Privacy Policy and Cookies Policy'
                
-               Margin="20,20,20,0"
+               Margin="30,30,30,0"
                FontAttributes="Bold"  
                FontFamily="Comfortaa"
-               FontSize="12"
+               FontSize="14"
                TextColor="White"/>
 
 
@@ -35,13 +36,13 @@
             </Grid.ColumnDefinitions>
 
             <Image Grid.Row="0" Grid.Column="0"  Source="asset_1.png" Margin="0,0,-50,0" HeightRequest="20"   WidthRequest="20"    VerticalOptions="Center"  Grid.ZIndex="1" Aspect="AspectFit" />
-            <Button x:Name="btnGoogle" Clicked="OnGoogleLoginClicked" Grid.Column="1" Padding="10" CornerRadius="40"  FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="20" BackgroundColor="White" TextColor="Black" Text="LOG IN WITH GOOGLE"></Button>
+            <Button x:Name="btnGoogle" Clicked="OnGoogleLoginClicked" Grid.Column="1" Padding="10" CornerRadius="40"  FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="18" BackgroundColor="White" TextColor="Black" Text="LOG IN WITH GOOGLE"></Button>
 
         </Grid>
 
 
 
-        <Grid Margin="20,20,20,0">
+        <Grid Margin="20,20,20,0" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
@@ -54,7 +55,7 @@
             <Image Grid.Row="0" Grid.Column="0" Source="facebook.png" Margin="0,0,-50,0" HeightRequest="20" WidthRequest="20" VerticalOptions="Center"  Grid.ZIndex="1"/>
 
             <Button x:Name="btnFacebook" Clicked="BtnFacebook_Clicked"
-                    Grid.Column="1" Padding="10" CornerRadius="40" BackgroundColor="White" TextColor="Black" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="20" Text="LOG IN WITH FACEBOOK"></Button>
+                    Grid.Column="1" Padding="10" CornerRadius="40" BackgroundColor="White" TextColor="Black" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="18" Text="LOG IN WITH FACEBOOK"></Button>
 
         </Grid>
 
@@ -72,9 +73,20 @@
 
         <Image Grid.Row="0" Grid.Column="0" Source="asset_1.png" Margin="0,0,-50,0" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" Grid.ZIndex="1"/>
 
-            <Button x:Name="btnPhoneNumber" Clicked="OnPhoneNumberLoginClicked" Grid.Row="0" Grid.Column="1" Padding="10" CornerRadius="40" BackgroundColor="White" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="20" TextColor="Black" Text="LOG IN WITH PHONE NUMBER"></Button>
+            <Button x:Name="btnPhoneNumber" Clicked="OnPhoneNumberLoginClicked" Grid.Row="0" Grid.Column="1" Padding="10" CornerRadius="40" BackgroundColor="White" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="18" TextColor="Black" Text="LOG IN WITH PHONE NUMBER"></Button>
 
         </Grid>
+
+        <Label Text="Trouble logging in?"
+               TextColor="White"
+               FontSize="16"
+               FontFamily="Comfortaa"
+               HorizontalOptions="Center"
+               Margin="0,20,0,0">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ForgetLabel_Tapped" />
+            </Label.GestureRecognizers>
+        </Label>
 
     </VerticalStackLayout>
 </ContentPage>
