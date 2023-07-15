@@ -1,4 +1,5 @@
 ﻿using Lovy.Views.Auth;
+using Lovy.Views.Profile;
 
 namespace Lovy;
 
@@ -17,5 +18,8 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(QualitiesPage), typeof(QualitiesPage));
         Routing.RegisterRoute(nameof(RulePage), typeof(RulePage));
 		Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
+		Routing.RegisterRoute(nameof(AboutMePage), typeof(AboutMePage));
+		Routing.RegisterRoute(nameof(EditProfilePage), typeof(EditProfilePage));
+		Routing.RegisterRoute(nameof(ProfileDashboard), typeof(ProfileDashboard));
     }
 }
