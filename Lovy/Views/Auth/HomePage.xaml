@@ -1,12 +1,155 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Lovy.Views.Auth.HomePage"
-             Title="Home Page">
-    <VerticalStackLayout>
-        <Label 
-            Text="Main Page"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="Lovy.Views.Auth.HomePage">
+    <ContentPage.Resources>
+        <!-- Define the FontAwesome font family -->
+        <x:String x:Key="home">&#xe1b0;</x:String>
+        <x:String x:Key="sms">&#xf086;</x:String>
+        <x:String x:Key="profile">&#xf007;</x:String>
+        <x:String x:Key="likes">&#xf005;</x:String>
+        <x:String x:Key="search">&#xf802;</x:String>
+        <x:String x:Key="refresh">&#xf2f1;</x:String>
+        <x:String x:Key="cancel">&#xf00d;</x:String>
+
+
+        <x:String x:Key="star">&#xf005;</x:String>
+        <x:String x:Key="boost">&#xf0e7;</x:String>
+    </ContentPage.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="#f9f9f9" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="logo.jpg" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="Setting" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Label Text="Notification" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" />
+        </Grid>
+
+        <!-- Carousel -->
+        <CarouselView Grid.Row="1">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Image Source="images.jpeg" Aspect="AspectFill" />
+                        <StackLayout BackgroundColor="#B2000000" Padding="10" VerticalOptions="Center">
+                            <Label Text="Name" TextColor="Green" FontAttributes="Bold" />
+                            <Label Text="30" TextColor="Black" />
+                            <Label Text="Location" TextColor="Black" />
+                        </StackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <!-- Buttons -->
+        <Grid Grid.Row="1"  VerticalOptions="End"  Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Frame Grid.Column="0" CornerRadius="100" Margin="10" BackgroundColor="Transparent" BorderColor="Orange"  Padding="5">
+                <ImageButton>
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FAS" Glyph="{StaticResource refresh}" Size="24" Color="Orange" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </Frame>
+            <Frame Grid.Column="1" CornerRadius="100" Margin="10" BackgroundColor="Transparent" BorderColor="Red" Padding="10">
+                <ImageButton>
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FAS" Glyph="{StaticResource cancel}" Size="24" Color="Red" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </Frame>
+
+            <Frame Grid.Column="2" CornerRadius="100" Margin="10" BackgroundColor="Transparent" BorderColor="LightBlue" Padding="10">
+                <ImageButton>
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FAS" Glyph="{StaticResource star}" Size="24" Color="LightBlue" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </Frame>
+
+            <Frame Grid.Column="3" CornerRadius="100" Margin="10" BackgroundColor="Transparent" BorderColor="Green" Padding="10">
+                <ImageButton>
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FAS" Glyph="{StaticResource likes}" Size="24" Color="Green" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </Frame>
+
+            <Frame Grid.Column="4" CornerRadius="100" Margin="10" BackgroundColor="Transparent" BorderColor="Purple" Padding="10">
+                <ImageButton>
+                    <ImageButton.Source>
+                        <FontImageSource FontFamily="FAS" Glyph="{StaticResource boost}" Size="24" Color="Purple" />
+                    </ImageButton.Source>
+                </ImageButton>
+            </Frame>
+            
+        </Grid>
+        
+        
+
+        <!-- Navigation -->
+        <Grid Grid.Row="3" BackgroundColor="White" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Grid.Column="0">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource home}" Size="24" Color="Red" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton Grid.Column="1">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource search}" Size="24" Color="Grey" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton Grid.Column="2">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource likes}" Size="24" Color="Grey" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton Grid.Column="3">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource sms}" Size="24" Color="Grey" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton Grid.Column="4" x:Name="BtnProfile" Clicked="BtnProfile_Clicked">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource profile}" Size="24" Color="Grey"  />
+                </ImageButton.Source>
+            </ImageButton>
+
+
+
+
+        </Grid>
+    </Grid>
 </ContentPage>
