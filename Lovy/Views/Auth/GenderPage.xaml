@@ -55,7 +55,7 @@
         <CheckBox 
             Color="#fe4f49" 
             CheckedChanged="OnCheckBoxCheckedChanged"
-             Margin="20,200,20,0"/>
+             Margin="20,350,20,0"/>
         <Label 
             Text="Show my gender on my profile" 
             VerticalOptions="Center"
@@ -75,7 +75,7 @@
             TextColor="White" 
             HorizontalOptions="FillAndExpand" 
             VerticalOptions="End"  
-            Margin="20,70,20,0"
+            Margin="20,50,20,0"
             x:Name="NextStep" 
             Clicked="NextBtn_Clicked" 
             CornerRadius="40"/>
