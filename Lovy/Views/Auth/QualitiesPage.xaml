@@ -44,7 +44,7 @@
                     <Label 
                         Text="Long-term partner" 
                         FontFamily="Comfortaa"
-                        FontSize="8"
+                        FontSize="12"
                         HorizontalOptions="Center" />    
                 </StackLayout>
                 <Frame.GestureRecognizers>
@@ -57,7 +57,7 @@
                     <Label 
                         Text="Long-term, but short-term, OK" 
                         FontFamily="Comfortaa"
-                        FontSize="8"
+                        FontSize="12"
                         HorizontalOptions="Center" />
                 </StackLayout>
                 <Frame.GestureRecognizers>
@@ -70,7 +70,7 @@
                     <Label 
                         Text="short-term, but Long-term, OK" 
                         FontFamily="Comfortaa"
-                        FontSize="8"
+                        FontSize="12"
                         HorizontalOptions="Center" />
                 </StackLayout>
                 <Frame.GestureRecognizers>
@@ -84,7 +84,7 @@
                     <Label 
                         Text="short-term fun" 
                         FontFamily="Comfortaa"
-                        FontSize="8"
+                        FontSize="12"
                         HorizontalOptions="Center" />
                 </StackLayout>
                 <Frame.GestureRecognizers>
@@ -97,7 +97,7 @@
                     <Label 
                         Text="New friends" 
                         FontFamily="Comfortaa"
-                        FontSize="8" />
+                        FontSize="12" />
                 </StackLayout>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnTileTapped" />
@@ -109,7 +109,7 @@
                     <Label 
                         Text="Still figuring it out" 
                         FontFamily="Comfortaa"
-                        FontSize="8"/>
+                        FontSize="12"/>
                 </StackLayout>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="OnTileTapped" />

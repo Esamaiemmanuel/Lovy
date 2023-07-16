@@ -32,7 +32,7 @@
                 FontAttributes="Bold"  
                 FontFamily="Comfortaa"
                 FontSize="17"
-                Margin="20,20,20,0"
+                Margin="20,40,20,0"
                 BackgroundColor="White"
                 Clicked="OnGenderButtonClicked"
                 BorderColor="{StaticResource DefaultBorderColor}"
