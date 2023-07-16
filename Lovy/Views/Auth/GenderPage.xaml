@@ -5,16 +5,16 @@
              Shell.NavBarIsVisible="false"
              Title="Gender">
     <ContentPage.Resources>
-        <Color x:Key="DefaultBorderColor">Black</Color>
+        <Color x:Key="DefaultBorderColor">Grey</Color>
         <Color x:Key="SelectedBorderColor">Red</Color>
     </ContentPage.Resources>
 
     <StackLayout>
 
-        <ProgressBar  Progress="0.4"  ProgressColor="#fe4f49"  Margin="0,0,0,0" />
+        <ProgressBar  Progress="0.8"  ProgressColor="#fe4f49"  Margin="0,0,0,0" />
 
         <!-- Back Arrow -->
-        <Image Source="arrow_left.svg" Margin="15,0,0,0" HorizontalOptions="Start"  >
+        <Image Source="arrow_left.svg" Margin="15,10,0,0" HorizontalOptions="Start"  >
             <Image.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnImageTapped" />
             </Image.GestureRecognizers>
@@ -24,14 +24,15 @@
             FontAttributes="Bold"  
             FontFamily="Comfortaa"
             FontSize="24"
-            Margin="20,10,0,0"
+            Margin="20,20,0,0"
             HorizontalOptions="Start" />
         <Button x:Name="maleButton"
                 Text="Male"
+                TextColor="Black"
                 FontAttributes="Bold"  
                 FontFamily="Comfortaa"
-                FontSize="24"
-                Margin="20,10,0,0"
+                FontSize="17"
+                Margin="20,20,20,0"
                 BackgroundColor="White"
                 Clicked="OnGenderButtonClicked"
                 BorderColor="{StaticResource DefaultBorderColor}"
@@ -40,14 +41,44 @@
 
         <Button x:Name="femaleButton"
                 Text="Female"
+                TextColor="Black"
                 FontAttributes="Bold"  
                 FontFamily="Comfortaa"
-                FontSize="24"
-                Margin="20,10,0,0"
+                FontSize="17"
+                Margin="20,20,20,0"
                 BackgroundColor="White"
                 Clicked="OnGenderButtonClicked"
                 BorderColor="{StaticResource DefaultBorderColor}"
                 BorderWidth="2"
                 CornerRadius="40"/>
+        
+        <CheckBox 
+            Color="#fe4f49" 
+            CheckedChanged="OnCheckBoxCheckedChanged"
+             Margin="20,200,20,0"/>
+        <Label 
+            Text="Show my gender on my profile" 
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontAttributes="Bold"  
+            FontFamily="Comfortaa"
+            FontSize="14"
+            Margin="20,0,20,0"/>
+        
+        <StackLayout VerticalOptions="End">
+            <Button 
+            Text="Next"    
+            FontFamily="Comfortaa" 
+            FontAttributes="Bold"
+            FontSize="18"
+            BackgroundColor="Red" 
+            TextColor="White" 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="End"  
+            Margin="20,70,20,0"
+            x:Name="NextStep" 
+            Clicked="NextBtn_Clicked" 
+            CornerRadius="40"/>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

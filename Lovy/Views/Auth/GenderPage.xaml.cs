@@ -29,4 +29,11 @@ public partial class GenderPage : ContentPage
         var button = (Button)sender;
         button.BorderColor = (Color)Resources["SelectedBorderColor"];
     }
+
+    private void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        // Handle checkbox checked/unchecked state change
+        bool isChecked = e.Value;
+        // Perform your desired action based on the checked state
+    }
 }

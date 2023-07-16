@@ -7,7 +7,7 @@
     <VerticalStackLayout>
         <ProgressBar    Progress="0.6"  ProgressColor="#fe4f49"  Margin="0,0,0,0" />
         <!-- Back Arrow -->
-        <Image Source="arrow_left.svg" Margin="15,0,0,0" HorizontalOptions="Start"  >
+        <Image Source="arrow_left.svg" Margin="15,10,0,0" HorizontalOptions="Start"  >
             <Image.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnImageTapped" />
             </Image.GestureRecognizers>
