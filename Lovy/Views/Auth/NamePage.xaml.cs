@@ -14,6 +14,7 @@ public partial class NamePage : ContentPage
     private void OnImageTapped(object sender, EventArgs e)
     {
         // Handle the image tap event
-        Navigation.PopAsync(); // Go back to the previous page
+       // Navigation.PopAsync(); // Go back to the previous page
+        Shell.Current.GoToAsync(nameof(RulePage));
     }
 }

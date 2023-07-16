@@ -19,32 +19,44 @@
         <ProgressBar Grid.Row="0" Progress="0.2"  ProgressColor="#fe4f49"  Margin="0,0,0,0" />
 
         <!-- Back Arrow -->
-        <Image Source="window_close.svg" Grid.Row="1" Margin="10,10,0,0" HorizontalOptions="Start"  >
+        <Image Source="window_close.svg" Grid.Row="1" Margin="15,10,0,0" HorizontalOptions="Start"  >
             <Image.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnImageTapped" />
             </Image.GestureRecognizers>
         </Image>
 
         <!-- Logo -->
-        <Image Source="logolove.png" Grid.Row="2" HorizontalOptions="Start" Margin="10,10,0,0"  />
+        <Image Source="logolove.png" Grid.Row="2" HorizontalOptions="Start" Margin="20,10,0,0"  />
 
         <!-- Welcome Text -->
         <StackLayout Grid.Row="3" HorizontalOptions="Start" VerticalOptions="Center">
-            <Label Text="Welcome To Lony Dovy" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="20" HorizontalTextAlignment="Start" Margin="10,0,0,0" />
-            <Label Text="Please follow these house rules" Opacity="0.5"  FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="10,0,0,0" />
-            <Label Text="Be yourself" FontAttributes="Bold" FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="10,20,0,0"/>
-            <Label Text="Make sure your photos, age and bio are true to who you are." FontFamily="Comfortaa" FontSize="12" HorizontalTextAlignment="Start" Margin="10,0,0,0" />
-            <Label Text="Stay Safe" FontAttributes="Bold" FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="10,20,0,0"/>
-            <Label Text="Dont Be to quick to give out personal information. Date Saftey" FontFamily="Comfortaa" FontSize="12" HorizontalTextAlignment="Start" Margin="10,0,0,0" />
-            <Label Text="Play it cool" FontFamily="Comfortaa" FontSize="13" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="10,20,0,0" />
-            <Label Text="Respect others and treat them as you would like to be treated" FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="10,0,0,0" />
-            <Label Text="Be Pro-Active" FontFamily="Comfortaa" FontSize="13" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="10,20,0,0" />
-            <Label Text="Always report bad behavior" FontFamily="Comfortaa" FontSize="13"  HorizontalTextAlignment="Start" Margin="10,0,0,0"/>
+            <Label Text="Welcome To Lony Dovy" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="20" HorizontalTextAlignment="Start" Margin="20,0,0,0" />
+            <Label Text="Please follow these house rules" Opacity="0.5"  FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="20,0,0,0" />
+            <Label Text="Be yourself" FontAttributes="Bold" FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="20,20,0,0"/>
+            <Label Text="Make sure your photos, age and bio are true to who you are." FontFamily="Comfortaa" FontSize="12" HorizontalTextAlignment="Start" Margin="20,0,0,0" />
+            <Label Text="Stay Safe" FontAttributes="Bold" FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="20,20,0,0"/>
+            <Label Text="Dont Be to quick to give out personal information. Date Saftey" FontFamily="Comfortaa" FontSize="12" HorizontalTextAlignment="Start" Margin="20,0,0,0" />
+            <Label Text="Play it cool" FontFamily="Comfortaa" FontSize="13" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="20,20,0,0" />
+            <Label Text="Respect others and treat them as you would like to be treated" FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="20,0,0,0" />
+            <Label Text="Be Pro-Active" FontFamily="Comfortaa" FontSize="13" FontAttributes="Bold" HorizontalTextAlignment="Start" Margin="20,20,0,0" />
+            <Label Text="Always report bad behavior" FontFamily="Comfortaa" FontSize="13"  HorizontalTextAlignment="Start" Margin="20,0,0,0"/>
             
         </StackLayout>
 
         <!-- Next Step Button -->
-        <Button Text="I agree" Grid.Row="4" BackgroundColor="Red" CornerRadius="30"  FontAttributes="Bold" FontFamily="Comfortaa" FontSize="15" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="End"  Margin="20" x:Name="NextStep" Clicked="NextStep_Clicked"/>
+        <Button Text="I agree" 
+                Grid.Row="4" 
+                BackgroundColor="Red" 
+                CornerRadius="40"  
+                FontAttributes="Bold" 
+                FontFamily="Comfortaa" 
+                FontSize="18" 
+                TextColor="White" 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="End"  
+                Margin="20" 
+                x:Name="NextStep" 
+                Clicked="NextStep_Clicked"/>
     </Grid>
 
 </ContentPage>

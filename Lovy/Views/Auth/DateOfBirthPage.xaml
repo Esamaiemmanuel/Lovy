@@ -5,36 +5,44 @@
              Shell.NavBarIsVisible="false"
              Title="Date Of Birth">
     <VerticalStackLayout>
-    
-        <Grid Margin="20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+        <ProgressBar    Progress="0.6"  ProgressColor="#fe4f49"  Margin="0,0,0,0" />
+        <!-- Back Arrow -->
+        <Image Source="arrow_left.svg" Margin="15,0,0,0" HorizontalOptions="Start"  >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnImageTapped" />
+            </Image.GestureRecognizers>
+        </Image>
+        <Label 
+            Text="Your BirthDay?"
+            FontAttributes="Bold"  
+            FontFamily="Comfortaa"
+            FontSize="24"
+            Margin="20,10,0,0"
+            HorizontalOptions="Start" />
+        <DatePicker  
+            FontAttributes="Bold"  
+            FontFamily="Comfortaa" 
+            FontSize="20" 
+            Margin="20,20,0,0" />
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <Label  
+            Text="Your profile only show your age, not your date" 
+            Margin="20,20,0,0" />
 
-            <Button Grid.Row="0" Grid.Column="0" Text="Back" HorizontalOptions="Start" x:Name="BtnBack" Clicked="BtnBack_Clicked"  Margin="10,20,20,20" />
+        <Button 
+            Text="Next"    
+            FontFamily="Comfortaa" 
+            FontAttributes="Bold"
+            FontSize="18"
+            BackgroundColor="Red" 
+            TextColor="White" 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="End"  
+            Margin="20,70,20,0"
+            x:Name="NextStep" 
+            Clicked="NextBtn_Clicked" 
+            CornerRadius="40"/>
 
-            <Label Grid.Row="1" Grid.Column="0" Text="Your BirthDay?" FontAttributes="Bold"  FontSize="20" Margin="10,0,0,0" />
-            <Entry Grid.Row="1" Grid.Column="1" />
 
-            <DatePicker Grid.Row="2" Grid.Column="0" FontAttributes="Bold"  FontSize="16" Margin="10,0,0,0" BackgroundColor="Gray"/>
-
-
-            <Label Grid.Row="3" Grid.Column="0" Text="Your profile only show your age, not your date" Margin="10,0,0,0" />
-
-
-            <!-- Additional content goes here -->
-
-            <Button Text="Next Step"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Red" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="End"  Margin="20" x:Name="NextStep" Clicked="NextBtn_Clicked" CornerRadius="40" />
-        </Grid>
     </VerticalStackLayout>
 </ContentPage>
