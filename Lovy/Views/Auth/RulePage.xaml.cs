@@ -11,4 +11,9 @@ public partial class RulePage : ContentPage
     {
 		Shell.Current.GoToAsync(nameof(NamePage));
     }
+    private void OnImageTapped(object sender, EventArgs e)
+    {
+        // Handle the image tap event
+        Navigation.PopAsync(); // Go back to the previous page
+    }
 }

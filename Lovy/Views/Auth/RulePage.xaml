@@ -2,24 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Shell.BackgroundColor="#fe4f49"
+             Shell.NavBarIsVisible="false"
              x:Class="Lovy.Views.Auth.RulePage">
+    <!-- Set HasNavigationBar to False -->
+
+  
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        <ProgressBar Grid.Row="0" Progress="0.2"  ProgressColor="#fe4f49"  Margin="0,0,0,0" />
 
         <!-- Back Arrow -->
-        <Image Source="back_arrow.png" HorizontalOptions="Start"  />
+        <Image Source="window_close.svg" Grid.Row="1" Margin="10,10,0,0" HorizontalOptions="Start"  >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnImageTapped" />
+            </Image.GestureRecognizers>
+        </Image>
 
         <!-- Logo -->
-        <Image Source="logolove.png" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Image Source="logolove.png" Grid.Row="2" HorizontalOptions="Start" Margin="10,10,0,0"  />
 
         <!-- Welcome Text -->
-        <StackLayout Grid.Row="2" HorizontalOptions="Start" VerticalOptions="Center">
+        <StackLayout Grid.Row="3" HorizontalOptions="Start" VerticalOptions="Center">
             <Label Text="Welcome To Lony Dovy" FontAttributes="Bold"  FontFamily="Comfortaa" FontSize="20" HorizontalTextAlignment="Start" Margin="10,0,0,0" />
             <Label Text="Please follow these house rules" Opacity="0.5"  FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="10,0,0,0" />
             <Label Text="Be yourself" FontAttributes="Bold" FontFamily="Comfortaa" FontSize="13" HorizontalTextAlignment="Start" Margin="10,20,0,0"/>
@@ -34,7 +44,7 @@
         </StackLayout>
 
         <!-- Next Step Button -->
-        <Button Text="I agree" Grid.Row="3" BackgroundColor="Red" CornerRadius="30"  FontAttributes="Bold" FontFamily="Comfortaa" FontSize="15" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="End"  Margin="20" x:Name="NextStep" Clicked="NextStep_Clicked"/>
+        <Button Text="I agree" Grid.Row="4" BackgroundColor="Red" CornerRadius="30"  FontAttributes="Bold" FontFamily="Comfortaa" FontSize="15" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="End"  Margin="20" x:Name="NextStep" Clicked="NextStep_Clicked"/>
     </Grid>
 
 </ContentPage>

@@ -10,14 +10,10 @@ public class MainActivity : MauiAppCompatActivity
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-
-      
+       
         Window.SetStatusBarColor(Android.Graphics.Color.Black);
         Window.SetNavigationBarColor(Android.Graphics.Color.Black);
-
         Window.DecorView.SetBackgroundColor(Android.Graphics.Color.Red);
-
-      
 
     }
 

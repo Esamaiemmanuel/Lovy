@@ -11,4 +11,9 @@ public partial class NamePage : ContentPage
     {
 		Shell.Current.GoToAsync(nameof(DateOfBirthPage));
     }
+    private void OnImageTapped(object sender, EventArgs e)
+    {
+        // Handle the image tap event
+        Navigation.PopAsync(); // Go back to the previous page
+    }
 }
