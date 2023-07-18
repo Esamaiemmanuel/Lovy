@@ -1,8 +1,13 @@
+using Firebase.Database;
+using Firebase.Database.Query;
+using Lovy.Models;
+
 namespace Lovy.Views.Auth;
 
 public partial class PhoneNumber : ContentPage
 {
-	public PhoneNumber()
+    FirebaseClient firebaseClient = new FirebaseClient("https://lovy-a520b-default-rtdb.firebaseio.com/");
+    public PhoneNumber()
 	{
 		InitializeComponent();
 	}
@@ -11,10 +16,21 @@ public partial class PhoneNumber : ContentPage
      
     }
 
+
     private void NextButton_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync(nameof(RulePage));
+        firebaseClient.Child("User").PostAsync(new Phone
+        {
+            Phonenumber = PhoneNumberEntry.Text,
+        });
+        Shell.Current.GoToAsync(nameof(PhoneCodePage));
+    }
+    private void OnImageTapped(object sender, EventArgs e)
+    {
+        // Handle the image tap event
+        // Navigation.PopAsync(); // Go back to the previous page
+        Shell.Current.GoToAsync(nameof(LoginPage));
     }
 
-    
+
 }

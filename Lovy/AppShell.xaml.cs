@@ -9,7 +9,6 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
 		Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
-		Routing.RegisterRoute(nameof(CodeVerification), typeof(CodeVerification));
 		Routing.RegisterRoute(nameof(PhoneNumber), typeof(PhoneNumber));
 		Routing.RegisterRoute(nameof(AddEmailPage), typeof(AddEmailPage));
         Routing.RegisterRoute(nameof(DateOfBirthPage), typeof(DateOfBirthPage));
@@ -26,6 +25,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(RecentPicPage), typeof(RecentPicPage));
         Routing.RegisterRoute(nameof(LocationPage), typeof(LocationPage));
         Routing.RegisterRoute(nameof(AvoidPage), typeof(AvoidPage));
-        Routing.RegisterRoute(nameof(ContactPage), typeof(ContactPage)); 
+        Routing.RegisterRoute(nameof(ContactPage), typeof(ContactPage));
+        Routing.RegisterRoute(nameof(PhoneCodePage), typeof(PhoneCodePage));
     }
 }

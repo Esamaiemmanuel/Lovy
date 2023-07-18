@@ -1,50 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Lovy.Views.Auth.PhoneNumber"
+             x:Class="Lovy.Views.Auth.PhoneCodePage"
              Shell.NavBarIsVisible="false"
-             Title="Phone Number">
-    
-   <StackLayout >
+             Title="PhoneCodePage">
+    <StackLayout >
         <Image Source="arrow_left.svg" Margin="15,10,0,0" HorizontalOptions="Start"  >
             <Image.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnImageTapped" />
             </Image.GestureRecognizers>
         </Image>
         <Label 
-            Text="My number is?"
+            Text="My Code is?"
             FontAttributes="Bold"  
             FontFamily="Comfortaa"
             FontSize="24"
             Margin="20,10,0,0"
             HorizontalOptions="Start" />
-        <StackLayout Orientation="Horizontal" 
-                     Margin="20,10,0,0">
-                <Picker x:Name="CountryCodePicker" 
-                        Title="Country "  
-                        FontFamily="Comfortaa"
-                        FontSize="20"
-                        SelectedIndexChanged="CountryCodeSelectedIndexChanged">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>+1</x:String>
-                            <x:String>+91</x:String>
-                            <x:String>+254</x:String>
-                            <x:String>+256</x:String>
-                            <x:String>+251</x:String>
-                            <x:String>+255</x:String>
-                            <x:String>+257</x:String>
-                            <x:String>+258</x:String>
-                    </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
-                <Entry x:Name="PhoneNumberEntry" 
-                        Placeholder="Phone Number"                        
+        
+            <Entry x:Name="PhoneNumberEntry" 
+                        Placeholder="MYCODE"                        
                         FontFamily="Comfortaa"
                         Keyboard="Numeric"
-                        CharacterSpacing="0"
-                        FontSize="20"/>
-            </StackLayout>
+                        FontAttributes="Bold"
+                        CharacterSpacing="30"
+                        Margin="20,30,20,20"
+                        FontSize="24"/>
+
         <Label 
             Text="When you tap Continue, Lovy Dovy will send a text with verification code. Message and data rates may apply. The verified phone number can be used to log in"
             FontFamily="Comfortaa"
@@ -60,10 +42,9 @@
             TextColor="White" 
             HorizontalOptions="FillAndExpand" 
             VerticalOptions="End"  
-            Margin="20,490,20,0"
+            Margin="20,450,20,0"
             x:Name="NextStep" 
             Clicked="NextButton_Clicked" 
             CornerRadius="40"/>
-    </StackLayout>
-    
+        </StackLayout>
 </ContentPage>

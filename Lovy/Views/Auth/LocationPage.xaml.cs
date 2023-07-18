@@ -94,6 +94,7 @@ public partial class LocationPage : ContentPage
                 var longitude = location.Longitude;
 
                 Shell.Current.GoToAsync(nameof(AvoidPage));
+                //await Navigation.PushAsync(new AvoidPage());
 
                 // Do something with the latitude and longitude values
             }
