@@ -2,18 +2,48 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lovy.Views.Profile.ProfileDashboard"
-             Title="Profile Dashboard">
-    <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+             Shell.NavBarIsVisible="false">
+    <ContentPage.Resources>
+        <!-- Define the FontAwesome font family -->
+        <x:String x:Key="home">&#xe1b0;</x:String>
+        <x:String x:Key="sms">&#xf086;</x:String>
+        <x:String x:Key="profile">&#xf007;</x:String>
+        <x:String x:Key="likes">&#xf005;</x:String>
+        <x:String x:Key="search">&#xf802;</x:String>
+        <x:String x:Key="refresh">&#xf2f1;</x:String>
+        <x:String x:Key="cancel">&#xf00d;</x:String>
 
-        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="20,0">
 
-            <Frame Grid.Row="0" BorderColor="White" VerticalOptions="Start" HeightRequest="160" HasShadow="False" CornerRadius="20" Margin="0,45,0,20" Padding="0" IsClippedToBounds="True">
-                <Image Source="timeline" Aspect="AspectFill"/>
-            </Frame>
+        <x:String x:Key="star">&#xf005;</x:String>
+        <x:String x:Key="boost">&#xf0e7;</x:String>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
+        <!-- Header -->
+        <Grid Grid.Row="0" BackgroundColor="Green" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="logo.jpg" HeightRequest="30" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Label Text="Setting" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Label Text="Notification" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Center" />
+        </Grid>
+   
+   
+
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="20,0" Grid.Row="1">
             <!-- Image Profile-->
-            <Frame Grid.Row="1" Margin="0,-90,0,0" BorderColor="White" HorizontalOptions="Center" WidthRequest="110" HeightRequest="{OnPlatform iOS='110', Android='20'}" HasShadow="False" CornerRadius="55" Padding="0" IsClippedToBounds="True">
-                <Image Source="modelprofile" Aspect="AspectFill"/>
+            <Frame x:Name="circleFrame" Grid.Row="1" BorderColor="Grey" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="160" WidthRequest="160" HasShadow="False" CornerRadius="80" Margin="0,45,0,20" Padding="0" IsClippedToBounds="True">
+                <Image Source="timeline" Aspect="AspectFill"/>
             </Frame>
 
             <!-- Profile name & general description-->
@@ -26,16 +56,18 @@
                 <Label Grid.Column="3" Text=" Age, 26" FontSize="15" TextColor="#9192b7"/>
                 <Button Grid.Column="4" Text="Regular" TextColor="#e29389" FontAttributes="Bold" Margin="5,0,0,0" CornerRadius="10" FontSize="9" WidthRequest="{OnPlatform iOS='50', Android='59'}" HeightRequest="{OnPlatform iOS='21', Android='30'}" BackgroundColor="#fae6e4"/>
             </Grid>
+        </Grid>
 
-            
-            <!-- likes section-->
-            <CollectionView Grid.Row="7" HorizontalScrollBarVisibility="Never"
-                 ItemsSource="{Binding likes}" Margin="0,0,-10,0"
-                 HeightRequest="140"
-                 ItemsLayout="HorizontalList">
+
+        <!-- likes section-->
+        
+            <CollectionView Grid.Row="4" HorizontalScrollBarVisibility="Never"
+                 ItemsSource="{Binding likes}" Margin="-30,10,-30,0"
+                 HeightRequest="400"
+                 ItemsLayout="HorizontalList" BackgroundColor="#F1F2F4">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout WidthRequest="{OnPlatform iOS='135', Android='160'}" Padding="0,0,15,0">
+                        <StackLayout WidthRequest="{OnPlatform iOS='135', Android='160'}" Padding="0,0,0,0">
                             <Frame CornerRadius="13" HorizontalOptions="Start" BorderColor="#c6c1ea" HasShadow="False">
                                 <Grid RowDefinitions="*,Auto">
                                     <Image Source="star" HorizontalOptions="Center" HeightRequest="40" WidthRequest="40" />
@@ -47,6 +79,53 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
+
+        <!-- Navigation -->
+        <Grid Grid.Row="5" BackgroundColor="White" Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Grid.Column="0">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource home}" Size="24" Color="Red" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton Grid.Column="1">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource search}" Size="24" Color="Grey" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton Grid.Column="2">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource likes}" Size="24" Color="Grey" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton Grid.Column="3">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource sms}" Size="24" Color="Grey" />
+                </ImageButton.Source>
+            </ImageButton>
+
+            <ImageButton Grid.Column="4" x:Name="BtnProfile" Clicked="BtnProfile_Clicked">
+                <ImageButton.Source>
+                    <FontImageSource FontFamily="FAS" Glyph="{StaticResource profile}" Size="24" Color="Grey"  />
+                </ImageButton.Source>
+            </ImageButton>
+
+
+
+
         </Grid>
-    </ScrollView>
+
+    </Grid>
+ 
+   
 </ContentPage>

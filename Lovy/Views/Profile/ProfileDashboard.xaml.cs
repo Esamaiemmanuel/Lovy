@@ -6,4 +6,9 @@ public partial class ProfileDashboard : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void BtnProfile_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
