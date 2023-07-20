@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using FirebaseAdmin;
+using Google.Apis.Auth.OAuth2;
 
 namespace Lovy;
 
@@ -14,6 +16,7 @@ public class MainActivity : MauiAppCompatActivity
         Window.SetStatusBarColor(Android.Graphics.Color.Black);
         Window.SetNavigationBarColor(Android.Graphics.Color.Black);
         Window.DecorView.SetBackgroundColor(Android.Graphics.Color.Red);
+        
 
     }
 
