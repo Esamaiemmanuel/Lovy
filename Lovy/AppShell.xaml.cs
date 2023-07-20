@@ -27,5 +27,6 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(AvoidPage), typeof(AvoidPage));
         Routing.RegisterRoute(nameof(ContactPage), typeof(ContactPage));
         Routing.RegisterRoute(nameof(PhoneCodePage), typeof(PhoneCodePage));
+        Routing.RegisterRoute(nameof(EmailPage), typeof(EmailPage));
     }
 }

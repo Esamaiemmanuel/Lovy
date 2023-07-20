@@ -30,7 +30,7 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 		<GenerateAppInstallerFile>False</GenerateAppInstallerFile>
 		<AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
-		<PackageCertificateThumbprint>C14239A9E82643970BDA5D200DAFB886D90DCD55</PackageCertificateThumbprint>
+		<PackageCertificateThumbprint>5356EA58AEBD54D017B1851EFF0D97CBF9F6C764</PackageCertificateThumbprint>
 		<AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
 		<AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
 		<AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>
@@ -86,7 +86,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="FirebaseAuthentication.net" Version="4.0.2" />
+	  <PackageReference Include="FirebaseAdmin" Version="2.4.0" />
+	  <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
 	  <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
 	</ItemGroup>
 
@@ -101,6 +102,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Auth\DateOfBirthPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Auth\EmailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Auth\GenderPage.xaml">

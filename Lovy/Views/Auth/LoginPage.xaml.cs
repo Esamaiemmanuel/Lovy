@@ -14,7 +14,7 @@ namespace Lovy.Views.Auth
         {
             // Handle Google login button click event
             // Perform actions for Google login
-            Shell.Current.GoToAsync(nameof(AddEmailPage));
+            Shell.Current.GoToAsync(nameof(EmailPage));
         }
 
         private void OnPhoneNumberLoginClicked(object sender, EventArgs e)
